@@ -1,0 +1,138 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+label.bold{
+    font-weight: bold;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.break-word{
+    word-wrap: break-word;
+}
+
+.inline{
+    display:inline;
+}
+
+.no-margin{
+    margin: 0; 
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.navbar-brand-sm{
+    font-size: 15px;
+}
+
+.margin-bottom-10{
+    font-size: 20px;
+    margin-bottom:10px;
+}
+
+.border{
+    border: 1px solid;
+    border-radius:5px;
+    width:100%;
+}
+
+
+
+.text-center{
+    text-align: center;
+}
+
+.margin-top-10{
+    margin-top: 10px;
+}
+
+.width-30-perc{
+    width:30%;
+}
+
+.width-50-perc{
+    width:50%;
+}
+
+.video-gallery-header{
+    border:1px solid #e6eeff;
+    padding: 5px;
+    margin:15px 0px;
+}
+
+.video_in_gallery{
+    height: 200px;
+    border: 1px solid;
+    float:left;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.td-backgroung-color{
+    background-color: #ebebe0;
+}
+
+.footer-block{
+    height: 100px;
+    width:100%;
+}
+
+.td-user-rate{
+    background-color: #b3d9ff;
+    text-align: center;
+}
+
+#companyRegisterCode{
+    display:none;
+}

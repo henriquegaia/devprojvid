@@ -1,0 +1,198 @@
+=====================================================
+BUSINESS MODEL
+=====================================================
+
+    1- allow companies to view video demos of home made projects from developers
+
+    2- staff agency       
+        -compare developers with company needs
+            -skills owned/needed
+            -location (if relevant to company)      
+
+=====================================================
+!!! - ERRORS - HIGH
+=====================================================
+
+    -VideoGalleryController.php
+        -updateVideos()
+            -Input::file('video_to_edit_x') does not return
+
+    -dont use hidden input on videoGallery.create
+
+    -should not be possible to have 2+ videos in same gallery with same name
+
+    -VideoGallery
+        Actions:           
+            -Update
+                -NOT FINISHED (SEE ERRORS)
+
+    -cant make angular work
+
+    -if company compare code with db (returning true as default)
+
+=====================================================
+!!! - ERRORS - MEDIUM
+=====================================================
+
+    -can't create multiple service providers
+
+    -all providers are in one file
+
+=====================================================
+!!! - ERRORS - LOW
+=====================================================
+
+    -glyphicons not loading /(using url instead of file ref)
+
+=====================================================
+HIGH
+=====================================================
+
+    -flash message & flash message important
+
+    -have only 1 place for flash messages: layouts.app
+        -update controller and views
+    
+    -route model binding
+        -like episode 18 laracasts: https://laracasts.com/series/laravel-5-fundamentals/episodes/18?autoplay=true
+        -a)RouteServiceProvider.boot
+        -b)On each method of a controller that we want to bind, receive on the function 
+        the instance of the model instead of the wildcard
+        
+
+    -use eloquent relations to save/update/delete data if mass assigment applicable
+        -ex: code commented on project.store
+
+    -use partial views & section content
+
+    -move middleware restrictions from web.php to constructor of classes when applicable (like project)
+
+    -matches on dashboard
+
+    -web.php
+        -review every route with developer and company middleware
+    
+    -create middleware to distinguish between dev and com
+        -different pages for dev and comp:
+            -user.edit
+            -project.show
+            -navbar company
+                -remove
+                    -my projects
+                    -create projects
+                -add
+                    -create request a developer
+
+    -Dashboard
+        -my projects
+        -statistics about ratings (+ ranking)
+            -video
+            -videoGallery
+            -project
+        -statistics about views (+ ranking)
+            -video
+            -videoGallery
+            -project
+        -sort projets by
+            -views
+            -likes
+            -...
+
+    -Home 
+        -if logged in       -> Developer
+            -discover related projects
+            -my projects
+            -create new project
+
+        -if logged out      
+            -login form
+            -welcome text
+            -who uses?
+
+=====================================================
+MEDIUM
+=====================================================
+
+    -1 video gallery by project and 1 video by video Gallery
+
+    -attribute code to company
+        -option 1:
+            -company sends request to out email
+            -we verify if it is a legit company
+            -send code by email
+        -option 2:
+            -just give the code on personal meeting/skype
+
+    -users table:
+        -add:
+            -string: 'main skills/languages to users' or create table languages/skills
+
+    -improve video display
+
+    -decide between 1 or more than 1 videos
+
+    -improve layout 
+        -project/show
+
+    -upload files to aws: 
+        -codecourse: https://www.youtube.com/watch?v=HDxCDdZFh9g
+        -need credit card
+
+    -user_settings
+        -location
+        -photo
+
+    -navbar right
+        -actions
+        -notifications
+
+    -navbar search bar
+
+=====================================================
+LOW
+=====================================================
+
+    -seed
+        -user
+        -dev
+        -comp
+        -project
+        -user_proj_rate
+        -...
+
+    -user avatar
+
+    -add more languages to array
+        -js lib, fw, ...
+
+    -remove public from url
+
+    -user_settings.blade
+        -transfer code on php to blade
+        -validate fields
+
+=====================================================
+CHANGE CODE WHEN USING AWS
+=====================================================
+
+    -Video.php
+        -storeVideo()
+        -videosByGalleries()
+        -delete DESTINATION_PATH
+
+    -delete folder
+        -database/uploads
+
+    -project/show
+        -inside <video>
+
+=====================================================
+CHANGE TO LIVE
+=====================================================
+
+    -email credentials on .env
+    -db credentials on .env
+    -php.ini
+        -file_uploads = On
+        -upload_max_filesize=50M
+        -post_max_size = <upload_max_filesize * nVideosByForm)M
